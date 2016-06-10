@@ -1,0 +1,16 @@
+<%= form_for(@user) do |f| %>
+　　
+　<%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+  
+  <%= f.label :email %>
+  <%= f.text_field :email, class: 'form-control' %>
+
+  <%= f.label :location %>
+  <%= f.text_field :location, class: 'form-control' %>
+
+  <%= f.label :profile %>
+  <%= f.text_area :profile, class: "hogehoge", size: "100x50" %>
+  
+  <%= f.submit "Update Profile", class: "btn btn-large btn-primary" %>
+<% end %>
