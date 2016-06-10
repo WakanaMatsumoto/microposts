@@ -104,3 +104,20 @@ input {
     color: $state-danger-text;
   }
 }
+
+h1 img{ margin-bottom:10px;}
+
+.panel-default > .panel-heading{
+  overflow: auto;
+  line-height: 33px;
+  font-weight: bold;
+}
+.table > thead > tr:first-child > th,
+.table > thead > tr:first-child > td,
+.table > tbody > tr:first-child > th,
+.table > tbody > tr:first-child > td,
+.table > tfoot > tr:first-child > th,
+.table > tfoot > tr:first-child > td{
+  border-top:none;
+}
+.table{ margin-bottom:0px;}
