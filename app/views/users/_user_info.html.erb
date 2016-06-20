@@ -1,0 +1,35 @@
+<aside class="col-md-4">
+  <section class="user_info">
+    <h1>
+      <%= gravatar_for user %>
+      <%= user.name %>
+    </h1>
+  </section>
+
+  <div class="row">
+    <!-- #フォロワー数 -->
+    <div class="col-md-6 followers_count">
+      <h3>フォロー</h3>
+      <span><%= link_to user.following_users.count, followings_user_path(user) %></span>
+    </div>
+
+    <div class="col-md-6 followers_count">
+      <h3>フォロワー</h3>
+      <span><%= link_to user.follower_users.count, followers_user_path(user) %></span>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      ユーザープロフィール
+      <%= link_to "更新する" , edit_user_path(user) , class: 'btn btn-primary pull-right' %>
+    </div>
+    <div class="panel-body clearfix">
+      <table class="table table-condensed">
+        <tr><th>Email</th><td><%= user.email %></td></tr>
+        <tr><th>ロケーション</th><td><%= user.location %></td></tr>
+        <tr><th>プロフィール</th><td><%= user.profile %></td></tr>
+      </table>
+    </div><!--//panel-body-->
+  </div><!--//panel-default-->
+</aside>

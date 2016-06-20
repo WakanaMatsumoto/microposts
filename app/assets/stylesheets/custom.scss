@@ -162,11 +162,13 @@ aside {
 .gravatar_edit {
   margin-top: 15px;
 }
-.microposts {
+.microposts,
+.follow_users{
   list-style: none;
   padding: 0;
   li {
     padding: 10px 0;
+    min-height: 80px;
     border-top: 1px solid #e8e8e8;
   }
   .user {
@@ -199,10 +201,20 @@ aside {
     margin-bottom: 5px;
   }
 }
-
 span.picture {
   margin-top: 10px;
   input {
     border: 0;
   }
+}
+.followers_count{
+  margin:10px 0;
+  text-align:center;
+}
+.followers_count h3{
+  font-size:15px;
+}
+.followers_count span{
+  font-size:25px;
+  font-weight:bold;
 }

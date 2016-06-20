@@ -1,26 +1,5 @@
 <div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        ユーザープロフィール
-        <%= link_to "更新する" , edit_user_path(@user) , class: 'btn btn-primary pull-right' %>
-      </div>
-      <div class="panel-body clearfix">
-        <table class="table table-condensed">
-          <tr><th>Email</th><td><%= @user.email %></td></tr>
-          <tr><th>ロケーション</th><td><%= @user.location %></td></tr>
-          <tr><th>プロフィール</th><td><%= @user.profile %></td></tr>
-        </table>
-      </div>
-    </div>
-  </aside>
+  <%= render partial: 'user_info', locals: { user: @user } %> 
   
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
